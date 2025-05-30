@@ -12,8 +12,6 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        sc.useLocale(Locale.US);
-
 
         List<Employee> list = new ArrayList<>();
 
@@ -32,11 +30,9 @@ public class Program {
             if (question == 'y') {
                 System.out.print("additional charge: ");
                 double additionalCharge = sc.nextDouble();
-                Employee emp = new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge);
-                list.add(emp);
+                list.add(new OutsourcedEmployee(name, hours, valuePerHour, additionalCharge));
             } else {
-                Employee emp = new Employee(name, hours, valuePerHour);
-                list.add(emp);
+                list.add(new Employee(name, hours, valuePerHour));
             }
         }
 
