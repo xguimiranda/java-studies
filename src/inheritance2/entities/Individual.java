@@ -28,7 +28,7 @@ public class Individual extends  TaxPayer{
         }else {
             tax = 0.25;
         }
-        if (getHealthcareCosts() < 0){
+        if (getHealthcareCosts() > 0){
             discount = getHealthcareCosts() * 0.50;
             return getAnnualIncome() * tax - getHealthcareCosts() * discount;
         }else {
