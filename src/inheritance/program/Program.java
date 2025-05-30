@@ -1,6 +1,9 @@
 package inheritance.program;
 
+import inheritance.entities.Circle;
+import inheritance.entities.Rectangle;
 import inheritance.entities.Shape;
+import inheritance.entities.enums.Color;
 
 import java.util.ArrayList;
 import java.util.List;
