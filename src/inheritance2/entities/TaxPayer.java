@@ -2,14 +2,14 @@ package inheritance2.entities;
 
 public abstract class TaxPayer {
     private String name;
-    private Double annualIncome;
+    private Double anualIncome;
 
     public TaxPayer() {
     }
 
-    public TaxPayer(String name, Double annualIncome) {
+    public TaxPayer(String name, Double anualIncome) {
         this.name = name;
-        this.annualIncome = annualIncome;
+        this.anualIncome = anualIncome;
     }
 
     public String getName() {
@@ -20,12 +20,12 @@ public abstract class TaxPayer {
         this.name = name;
     }
 
-    public Double getAnnualIncome() {
-        return annualIncome;
+    public Double getAnualIncome() {
+        return anualIncome;
     }
 
-    public void setAnnualIncome(Double annualIncome) {
-        this.annualIncome = annualIncome;
+    public void setAnualIncome(Double anualIncome) {
+        this.anualIncome = anualIncome;
     }
 
     public abstract Double tax();
