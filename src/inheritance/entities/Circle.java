@@ -23,6 +23,6 @@ public class Circle extends Shape {
 
     @Override
     public double area(){
-        return radius*2;
+        return Math.PI * radius * radius;
     }
 }
