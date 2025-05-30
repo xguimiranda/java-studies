@@ -40,9 +40,12 @@ public class Program {
                 list.add(new Circle(color, radius));
             }
         }
+        System.out.println();
+        System.out.println("SHAPE AREAS:");
+        for (Shape shape : list){
+            System.out.println(shape.area());
+        }
 
-
-        
         sc.close();
     }
 }
