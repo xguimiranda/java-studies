@@ -23,7 +23,7 @@ public class Individual extends  TaxPayer{
     public Double tax(){
         double tax;
         double discount;
-        if (getAnnualIncome() <= 20000){
+        if (getAnnualIncome() < 20000){
             tax = 0.15;
         }else {
             tax = 0.25;
