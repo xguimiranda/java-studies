@@ -22,10 +22,6 @@ public class Program {
             char question = sc.next().toLowerCase().charAt(0);
             System.out.print("Color (BLACK/BLUE/RED): ");
             Color color = Color.valueOf(sc.next());
-            while (!color.equals("BLACK") && !color.equals("BLUE") && !color.equals("RED")){
-                System.out.print("Only type: (BLACK/BLUE/RED): ");
-                color = sc.next();
-            }
             if (question == 'r'){
                 System.out.print("Width: ");
                 double width = sc.nextDouble();
