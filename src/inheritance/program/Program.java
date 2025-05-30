@@ -26,6 +26,19 @@ public class Program {
                 System.out.print("Only type: (BLACK/BLUE/RED): ");
                 color = sc.next();
             }
+            if (question == 'r'){
+                System.out.print("Width: ");
+                double width = sc.nextDouble();
+                System.out.print("Height: ");
+                double height = sc.nextDouble();
+
+                list.add(new Rectangle(color, width, height));
+            } else {
+                System.out.print("Radius: ");
+                double radius = sc.nextDouble();
+
+                list.add(new Circle(color, radius));
+            }
         }
 
 
