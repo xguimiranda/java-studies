@@ -32,7 +32,7 @@ public class Program {
                 LocalDate manufactureDate = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
                 list.add(new UsedProduct(name, price, manufactureDate));
             } else if (question == 'i') {
-                System.out.println("Customs fee: ");
+                System.out.print("Customs fee: ");
                 double customsFee = sc.nextDouble();
                 list.add(new ImportedProduct(name, price, customsFee));
             } else {
