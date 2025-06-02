@@ -30,6 +30,9 @@ public class Program {
         catch (withDrawLimitException e){
             System.out.println("Withdraw error: ");
         }
+        catch (balanceLimitException e){
+            System.out.println("Withdraw error: ");
+        }
 
         sc.close();
     }
