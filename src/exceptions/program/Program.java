@@ -27,8 +27,8 @@ public class Program {
             double amount = sc.nextDouble();
             acc.withDraw(amount);
         }
-        catch (withDrawLimitException e){
-            System.out.println("Withdraw error: ");
+        catch (withDrawLimitException | balanceLimitException e){
+            System.out.println("Withdraw error: " + e.getMessage());
         }
         catch (balanceLimitException e){
             System.out.println("Withdraw error: ");
