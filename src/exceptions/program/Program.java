@@ -26,6 +26,7 @@ public class Program {
             System.out.print("Enter amount for withdraw: ");
             double amount = sc.nextDouble();
             acc.withDraw(amount);
+            System.out.println(String.format("New balance: %.2f"+ acc.getBalance()));
         }
         catch (withDrawLimitException | balanceLimitException e){
             System.out.println("Withdraw error: " + e.getMessage());
