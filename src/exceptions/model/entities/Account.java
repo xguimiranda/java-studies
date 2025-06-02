@@ -49,7 +49,10 @@ public class Account {
         balance += amount;
     }
 
-    public void withDraw(double amount){
+    public void withDraw(double amount) throws withDrawLimitException {
+        if (amount > withdrawLimit){
+            throw new withDrawLimitException("The amount exceeds withdraw limit");
+        }
         balance -= amount;
     }
 }
