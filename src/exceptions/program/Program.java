@@ -1,6 +1,8 @@
 package exceptions.program;
 
 import exceptions.model.entities.Account;
+import exceptions.model.exceptions.balanceLimitException;
+import exceptions.model.exceptions.withDrawLimitException;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -17,6 +19,7 @@ public class Program {
             System.out.print("Holder: ");
             String holder = sc.next();
             System.out.print("Initial balance: ");
+            sc.nextLine();
             double balance = sc.nextDouble();
             System.out.print("WithDraw limit: ");
             double withDrawLimit = sc.nextDouble();

@@ -1,5 +1,8 @@
 package exceptions.model.entities;
 
+import exceptions.model.exceptions.balanceLimitException;
+import exceptions.model.exceptions.withDrawLimitException;
+
 public class Account {
     private Integer number;
     private String holder;
@@ -49,7 +52,7 @@ public class Account {
         balance += amount;
     }
 
-    public void withDraw(double amount) throws withDrawLimitException {
+    public void withDraw(double amount) throws withDrawLimitException, balanceLimitException {
         if (amount > withdrawLimit){
             throw new withDrawLimitException("The amount exceeds withdraw limit");
         }
