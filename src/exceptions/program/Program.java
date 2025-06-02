@@ -30,8 +30,8 @@ public class Program {
         catch (withDrawLimitException | balanceLimitException e){
             System.out.println("Withdraw error: " + e.getMessage());
         }
-        catch (balanceLimitException e){
-            System.out.println("Withdraw error: ");
+        catch (RuntimeException e){
+            System.out.println("Unexpected error");
         }
 
         sc.close();
