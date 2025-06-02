@@ -22,11 +22,14 @@ public class Program {
             double withDrawLimit = sc.nextDouble();
             Account acc = new Account(number, holder, balance, withDrawLimit);
 
-        System.out.println();
-        System.out.print("Enter amount for withdraw: ");
-        double amount = sc.nextDouble();
-        acc.withDraw(amount);
-
+            System.out.println();
+            System.out.print("Enter amount for withdraw: ");
+            double amount = sc.nextDouble();
+            acc.withDraw(amount);
+        }
+        catch (withDrawLimitException e){
+            System.out.println("Withdraw error: ");
+        }
 
         sc.close();
     }
