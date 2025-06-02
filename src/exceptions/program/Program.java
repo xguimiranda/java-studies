@@ -10,16 +10,17 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter your account data: ");
-        System.out.print("Number: ");
-        int number = sc.nextInt();
-        System.out.print("Holder: ");
-        String holder = sc.next();
-        System.out.print("Initial balance: ");
-        double balance = sc.nextDouble();
-        System.out.print("WithDraw limit: ");
-        double withDrawLimit = sc.nextDouble();
-        Account acc = new Account(number, holder, balance, withDrawLimit);
+        try {
+            System.out.println("Enter your account data: ");
+            System.out.print("Number: ");
+            int number = sc.nextInt();
+            System.out.print("Holder: ");
+            String holder = sc.next();
+            System.out.print("Initial balance: ");
+            double balance = sc.nextDouble();
+            System.out.print("WithDraw limit: ");
+            double withDrawLimit = sc.nextDouble();
+            Account acc = new Account(number, holder, balance, withDrawLimit);
 
         System.out.println();
         System.out.print("Enter amount for withdraw: ");
