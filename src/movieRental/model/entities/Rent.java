@@ -34,4 +34,15 @@ public class Rent {
     public double totalPrice(){
         return duration() * film.getPrice();
     }
+
+    @Override
+    public String toString(){
+        StringBuilder sb = new StringBuilder();
+        sb.append("Client: "+ client.toString() + "\n");
+        sb.append("Movie: "+ film.toString()+ "\n");
+        sb.append("Rental days: "+ duration()+"\n");
+        sb.append("Total: $" + String.format("%.2f", totalPrice()));
+
+        return sb.toString();
+    }
 }
