@@ -38,4 +38,9 @@ public class Film {
         this.price = price;
     }
 
+    @Override
+    public String toString(){
+        return filmName + " - " + gender;
+    }
+
 }
