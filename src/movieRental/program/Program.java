@@ -8,7 +8,6 @@ import movieRental.model.entities.Rent;
 import movieRental.model.exceptions.NewRentalDateException;
 import movieRental.model.exceptions.WrongDataException;
 
-import java.io.PrintStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
