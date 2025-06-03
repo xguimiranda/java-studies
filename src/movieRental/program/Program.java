@@ -6,7 +6,9 @@ import movieRental.model.entities.Film;
 import movieRental.model.entities.Gender;
 import movieRental.model.entities.Rent;
 import movieRental.model.exceptions.NewRentalDateException;
+import movieRental.model.exceptions.WrongDataException;
 
+import java.io.PrintStream;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
@@ -43,7 +45,7 @@ public class Program {
             System.out.println();
 
             System.out.println("Enter rental data:");
-            System.out.print("Days of rental: ");
+            System.out.print("Last day of your rent (dd/mm/yyyy): ");
             LocalDate rentDate = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             Rent rent = new Rent(client, new Film(title, gender, price), intantDate, rentDate);
             System.out.println();
@@ -54,7 +56,7 @@ public class Program {
             char question = sc.next().toLowerCase().charAt(0);
 
         if (question == 'y'){
-            System.out.print("New rental duration (max 30 days): ");
+            System.out.print("New last day of rent(max 30 days | dd/mm/yyyy): ");
             LocalDate newRentalDate = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             rent.updateRentalDate(newRentalDate);
             System.out.println("UPDATED RENTAL: ");
@@ -62,6 +64,9 @@ public class Program {
         }
         }
         catch (NewRentalDateException e){
+            System.out.println("ERROR: "+ e.getMessage());
+        }
+        catch (WrongDataException e ){
             System.out.println("ERROR: "+ e.getMessage());
         }
         catch (InputMismatchException e){

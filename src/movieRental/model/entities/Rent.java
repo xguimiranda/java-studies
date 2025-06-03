@@ -1,6 +1,8 @@
 package movieRental.model.entities;
 
 import movieRental.model.exceptions.NewRentalDateException;
+import movieRental.model.exceptions.WrongDataException;
+
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
@@ -13,6 +15,7 @@ public class Rent {
 
     public Rent(Client client, Film film, LocalDate instanteDate, LocalDate rentDate) {
         this.client = client;
+        this.film = film;
         this.instanteDate = instanteDate;
         this.rentDate = rentDate;
     }
@@ -26,17 +29,23 @@ public class Rent {
         return instanteDate;
     }
 
-    public long duration(){
+    public long duration() throws WrongDataException{
+        if (ChronoUnit.DAYS.between(instanteDate, rentDate) <= 0) {
+            throw new WrongDataException("New rental date must be after today.");
+        }
         return ChronoUnit.DAYS.between(instanteDate, rentDate);
     }
 
-    public double totalPrice(){
+    public double totalPrice() {
         return duration() * film.getPrice();
     }
 
-    public void updateRentalDate(LocalDate date) throws NewRentalDateException {
+    public void updateRentalDate(LocalDate date) throws NewRentalDateException, WrongDataException {
         if (ChronoUnit.DAYS.between(instanteDate, date) > 30){
             throw new NewRentalDateException("Rental duration cannot exceed 30 days.");
+        }
+        if (ChronoUnit.DAYS.between(instanteDate, date) <= 0) {
+            throw new WrongDataException("New rental date must be after today.");
         }
         this.rentDate = date;
     }
