@@ -24,5 +24,9 @@ public class Client {
         return cpf;
     }
 
-    
+    @Override
+    public String toString(){
+        return name + " (CPF: " + cpf + ")";
+    }
+
 }
