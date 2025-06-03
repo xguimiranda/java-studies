@@ -2,12 +2,12 @@ package movieRental.model.entities;
 
 public class Client {
     private String name;
-    private Integer cpf;
+    private String cpf;
 
     public Client() {
     }
 
-    public Client(String name, Integer cpf) {
+    public Client(String name, String cpf) {
         this.name = name;
         this.cpf = cpf;
     }
@@ -20,7 +20,7 @@ public class Client {
         this.name = name;
     }
 
-    public Integer getCpf() {
+    public String getCpf() {
         return cpf;
     }
 

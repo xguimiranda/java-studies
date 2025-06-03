@@ -1,23 +1,21 @@
 package movieRental.model.entities;
 
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
 public class Rent {
-    private String filmName;
+    private Film film;
     private LocalDate rentDate;
-    private LocalDate instanteDate;
+    private final LocalDate instanteDate;
+    private Client client;
 
-    public Rent(String filmName, LocalDate rentDate, LocalDate instanteDate) {
-        this.filmName = filmName;
-        this.rentDate = rentDate;
+
+    public Rent(Client client, Film film, LocalDate instanteDate, LocalDate rentDate) {
+        this.client = client;
         this.instanteDate = instanteDate;
+        this.rentDate = rentDate;
     }
 
-    public String getFilmName() {
-        return filmName;
-    }
-
-    public void setFilmName(String filmName) {
-        this.filmName = filmName;
-    }
 
     public LocalDate getRentDate() {
         return rentDate;
