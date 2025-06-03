@@ -33,6 +33,13 @@ public class Rent {
         return duration() * film.getPrice();
     }
 
+    public void updateRentalDate(LocalDate date) throws NewRentalDateException {
+        if (ChronoUnit.DAYS.between(instanteDate, date) > 30){
+            throw new NewRentalDateException("Rental duration cannot exceed 30 days.");
+        }
+        this.rentDate = date;
+    }
+
     @Override
     public String toString(){
         StringBuilder sb = new StringBuilder();
