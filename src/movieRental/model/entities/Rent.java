@@ -1,5 +1,6 @@
 package movieRental.model.entities;
 
+import movieRental.model.exceptions.NewRentalDateException;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
