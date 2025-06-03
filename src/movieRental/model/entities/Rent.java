@@ -30,4 +30,8 @@ public class Rent {
     public long duration(){
         return ChronoUnit.DAYS.between(instanteDate, rentDate);
     }
+
+    public double totalPrice(){
+        return duration() * film.getPrice();
+    }
 }
