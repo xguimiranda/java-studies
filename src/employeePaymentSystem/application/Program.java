@@ -20,6 +20,7 @@ public class Program {
         System.out.print("Enter the number of employees: ");
         int n = sc.nextInt();
         for (int i = 1; i <= n; i++){
+            System.out.println();
             System.out.println("Employee #" + i + " data:");
             System.out.print("Outsourced (y/n)? ");
             char question = sc.next().toLowerCase().charAt(0);
