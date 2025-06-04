@@ -52,7 +52,13 @@ public class Program {
         }catch (RuntimeException e){
             System.out.println("Unexpected ERROR: "+ e.getMessage());
         }
-        sc.close();
+            if (list.isEmpty()) {
+                System.out.println("No registered employees");
+            }
+            else{
+                readEmployee(list);
+            }
+    sc.close();
     }
 
     public static void readEmployee(List<Employee> list){
