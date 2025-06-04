@@ -36,7 +36,7 @@ public class Program {
             System.out.print("Hourly Rate: ");
             double hourlyRate = sc.nextDouble();
             if (question == 'y'){
-                System.out.println("Additional charge: ");
+                System.out.print("Additional charge: ");
                 double additionalCharge = sc.nextDouble();
                 list.add(new OutsourcedEmployee(name, hourlyRate, hours, additionalCharge));
             }else{
