@@ -38,4 +38,8 @@ public abstract class employee {
     public double payment(){
         return hourlyRate* hours;
     }
+
+    public String toString(){
+        return name + " - $" + String.format("%.2f", payment());
+    }
 }
