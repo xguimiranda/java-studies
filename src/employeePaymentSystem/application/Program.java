@@ -44,11 +44,7 @@ public class Program {
                     list.add(new RegularEmployee(name, hourlyRate, hours));
                 }
             }
-            System.out.println();
-            System.out.println("PAYMENTS:");
-            for (Employee employee : list) {
-                System.out.println(employee);
-            }
+
         }catch (RuntimeException e){
             System.out.println("Unexpected ERROR: "+ e.getMessage());
         }
