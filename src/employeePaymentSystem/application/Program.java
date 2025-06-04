@@ -1,5 +1,14 @@
 package employeePaymentSystem.application;
 
+import employeePaymentSystem.model.entities.Employee;
+import employeePaymentSystem.model.entities.OutsourcedEmployee;
+import employeePaymentSystem.model.entities.RegularEmployee;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
 public class Program {
     public static void main(String[] args) {
 
