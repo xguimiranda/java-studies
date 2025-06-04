@@ -54,4 +54,12 @@ public class Program {
         }
         sc.close();
     }
+
+    public static void readEmployee(List<Employee> list){
+        System.out.println();
+        System.out.println("PAYMENTS:");
+        for (Employee employee : list) {
+            System.out.println(employee);
+        }
+    }
 }
