@@ -1,11 +1,11 @@
 package employeePaymentSystem.model.entities;
 
-public abstract class employee {
+public abstract class Employee {
     private String name;
     private Double hourlyRate;
     private Integer hours;
 
-    public employee(String name, Double hourlyRate, Integer hours) {
+    public Employee(String name, Double hourlyRate, Integer hours) {
         this.name = name;
         this.hourlyRate = hourlyRate;
         this.hours = hours;
@@ -36,7 +36,7 @@ public abstract class employee {
     }
 
     public double payment(){
-        return hourlyRate* hours;
+        return hourlyRate * hours;
     }
 
     public String toString(){
