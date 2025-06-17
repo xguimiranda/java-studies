@@ -44,7 +44,5 @@ public class CarRental {
         return invoice;
     }
 
-    public void setInvoice(Invoice invoice) {
-        this.invoice = invoice;
-    }
+   
 }
