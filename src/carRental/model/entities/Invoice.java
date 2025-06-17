@@ -6,4 +6,7 @@ public class Invoice {
     private double tax;
 
 
+    public double totalPayment(){
+       return basicPayment + tax;
+    }
 }
