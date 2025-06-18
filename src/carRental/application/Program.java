@@ -22,7 +22,7 @@ public class Program {
         System.out.print("Modelo do carro: ");
         String modelo = sc.nextLine();
         System.out.print("Retirada (dd/MM/yyyy hh:mm): ");
-        LocalDate start = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+        LocalDateTime start = LocalDateTime.parse(sc.nextLine(), dmt);
         System.out.print("Retorno (dd/MM/yyyy hh:mm): ");
         LocalDate finish = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
         CarRental cr = new CarRental(start, finish, new Vehicle(modelo));
