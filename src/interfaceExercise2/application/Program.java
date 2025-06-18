@@ -19,7 +19,7 @@ public class Program {
         System.out.print("Numero: ");
         int numero = sc.nextInt();
         System.out.print("Data (dd/MM/yyyy): ");
-        LocalDate date = LocalDate.parse(sc.nextLine(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        LocalDate date = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
         System.out.print("Valor do contrato: ");
         double contractValue = sc.nextDouble();
         System.out.print("Entre com o numero de parcelas: ");
