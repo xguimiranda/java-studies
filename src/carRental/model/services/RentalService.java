@@ -46,6 +46,7 @@ public class RentalService {
             basicPayment = pricePerDay * Math.ceil(hours / 24.0);
         }
 
-        cr.setInvoice(new Invoice(basicPayment, brazilTaxService.tax(basicPayment)));
+        double tax = brazilTaxService.tax(basicPayment);
+        cr.setInvoice(new Invoice(basicPayment, tax));
     }
 }
