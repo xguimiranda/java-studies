@@ -27,4 +27,9 @@ public class Installment {
     public void setAmount(Double amount) {
         this.amount = amount;
     }
+
+    @Override
+    public String toString() {
+        return date + " - " + String.format("%.2f", amount);
+    }
 }
