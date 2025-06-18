@@ -16,6 +16,8 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        DateTimeFormatter dmt = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+
         System.out.println("Entre com os dados do aluguel");
         System.out.print("Modelo do carro: ");
         String modelo = sc.nextLine();
