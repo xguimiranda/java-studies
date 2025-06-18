@@ -12,6 +12,12 @@ public class RentalService {
 
     private BrazilTaxService brazilTaxService;
 
+    public RentalService(double pricePerHour, double pricePerDay, BrazilTaxService brazilTaxService) {
+        this.pricePerHour = pricePerHour;
+        this.pricePerDay = pricePerDay;
+        this.brazilTaxService = brazilTaxService;
+    }
+
     public double getPricePerHour() {
         return pricePerHour;
     }
