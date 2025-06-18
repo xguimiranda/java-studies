@@ -11,5 +11,26 @@ public class RentalService {
 
     public void processInvoice(CarRental carRental){
 
+    public double getPricePerDay() {
+        return pricePerDay;
+    }
+
+    public void setPricePerDay(double pricePerDay) {
+        this.pricePerDay = pricePerDay;
+    }
+
+    public void processInvoice(CarRental cr){
+        double minutes = Duration.between(cr.getStart(), cr.getFinish()).toMinutes();
+        double hours = minutes / 60.0;
+
+        double basicPayment;
+        if (hours <= 12.0){
+            basicPayment = pricePerHour * Math.ceil(hours);
+        }
+        else {
+            basicPayment = pricePerDay * Math.ceil(hours / 24.0);
+        }
+
+        cr.setInvoice(new Invoice(basicPayment, brazilTaxService.tax(basicPayment)));
     }
 }
