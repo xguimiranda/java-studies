@@ -1,6 +1,9 @@
 package interfaceExercise2.model.service;
 
 import interfaceExercise2.model.entities.Contract;
+import interfaceExercise2.model.entities.Installment;
+
+import java.time.LocalDate;
 
 public class ContractService {
 
