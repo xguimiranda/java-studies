@@ -27,7 +27,7 @@ public class Program {
         double pricePerHour = sc.nextDouble();
         System.out.print("Entre com o preço por dia: ");
         double pricePerDay = sc.nextDouble();
-
+        RentalService rt = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService());
 
         System.out.println("FATURA:");
         System.out.println("Pagamento basico: ");
