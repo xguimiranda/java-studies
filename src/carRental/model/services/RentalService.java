@@ -1,6 +1,9 @@
 package carRental.model.services;
 
 import carRental.model.entities.CarRental;
+import carRental.model.entities.Invoice;
+
+import java.time.Duration;
 
 public class RentalService {
 
