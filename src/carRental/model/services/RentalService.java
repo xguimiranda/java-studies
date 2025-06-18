@@ -9,7 +9,13 @@ public class RentalService {
 
     private BrazilTaxService brazilTaxService;
 
-    public void processInvoice(CarRental carRental){
+    public double getPricePerHour() {
+        return pricePerHour;
+    }
+
+    public void setPricePerHour(double pricePerHour) {
+        this.pricePerHour = pricePerHour;
+    }
 
     public double getPricePerDay() {
         return pricePerDay;
