@@ -4,20 +4,20 @@ import java.time.LocalDate;
 
 public class Installment {
 
-    private LocalDate dueDate;
+    private LocalDate date;
     private Double amount;
 
-    public Installment(LocalDate dueDate, Double amount) {
-        this.dueDate = dueDate;
+    public Installment(LocalDate date, Double amount) {
+        this.date = date;
         this.amount = amount;
     }
 
-    public LocalDate getDueDate() {
-        return dueDate;
+    public LocalDate getDate() {
+        return date;
     }
 
-    public void setDueDate(LocalDate dueDate) {
-        this.dueDate = dueDate;
+    public void setDate(LocalDate date) {
+        this.date = date;
     }
 
     public Double getAmount() {
