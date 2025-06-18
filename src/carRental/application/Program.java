@@ -24,7 +24,7 @@ public class Program {
         System.out.print("Retirada (dd/MM/yyyy hh:mm): ");
         LocalDateTime start = LocalDateTime.parse(sc.nextLine(), dmt);
         System.out.print("Retorno (dd/MM/yyyy hh:mm): ");
-        LocalDate finish = LocalDate.parse(sc.next(), DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+        LocalDateTime finish = LocalDateTime.parse(sc.nextLine(),dmt);
         CarRental cr = new CarRental(start, finish, new Vehicle(modelo));
 
         System.out.print("Entre com o preço por hora: ");
