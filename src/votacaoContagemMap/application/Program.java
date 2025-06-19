@@ -1,6 +1,5 @@
 package votacaoContagemMap.application;
 
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -47,6 +46,17 @@ public class Program {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
+
+        /// Input file example:
+        /// Alex Blue,15
+        /// Maria Green,22
+        /// Bob Brown,21
+        /// Alex Blue,30
+        /// Bob Brown,15
+        /// Maria Green,27
+        /// Maria Green,22
+        /// Bob Brown,25
+        /// Alex Blue,31
 
         sc.close();
 
