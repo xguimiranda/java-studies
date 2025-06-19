@@ -19,7 +19,7 @@ public class Program {
         for (int i = 1; i <= n; i++){
             a.add(sc.nextInt());
         }
-        System.out.println("How many students for course A? ");
+        System.out.print("How many students for course B? ");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++){
             b.add(sc.nextInt());
