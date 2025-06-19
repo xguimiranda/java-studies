@@ -24,4 +24,32 @@ public class Program {
 
             String line = br.readLine();
 
+            while(line != null){
+
+                String[] fields = line.split(",");
+                String name = fields[0];
+                int counts = Integer.parseInt(fields[1]);
+
+                if (votes.containsKey(name)) {
+                    int votesSoFar = votes.get(name);
+                    votes.put(name, counts + votesSoFar);
+                }
+                else {
+                    votes.put(name, counts);
+                }
+
+                line = br.readLine();
+            }
+
+            for (String key : votes.keySet()) {
+                System.out.println(key + ": " + votes.get(key));
+            }
+
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        sc.close();
+
+    }
 }
