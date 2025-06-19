@@ -24,7 +24,7 @@ public class Program {
         for (int i = 1; i <= n; i++){
             b.add(sc.nextInt());
         }
-        System.out.println("How many students for course A? ");
+        System.out.print("How many students for course C? ");
         n = sc.nextInt();
         for (int i = 1; i <= n; i++){
             c.add(sc.nextInt());
