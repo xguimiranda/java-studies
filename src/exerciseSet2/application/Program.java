@@ -14,7 +14,7 @@ public class Program {
         Set<Integer> b = new HashSet<>();
         Set<Integer> c = new HashSet<>();
 
-        System.out.println("How many students for course A? ");
+        System.out.print("How many students for course A? ");
         int n = sc.nextInt();
         for (int i = 1; i <= n; i++){
             a.add(sc.nextInt());
