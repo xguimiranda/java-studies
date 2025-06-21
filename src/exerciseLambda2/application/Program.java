@@ -36,6 +36,12 @@ public class Program {
 
             System.out.println("Average price: "+ String.format("%.2f", avg));
 
+            List<String> names = list.stream().filter(p -> p.getPrice() < avg)
+                    .map(p -> p.getName())
+                    .sorted((s1,s2) -> s1.toUpperCase().compareTo(s2.toUpperCase()))
+                    .collect(Collectors.toList()).reversed();
+
+            names.forEach(System.out::println);
         }
         catch (IOException e) {
             System.out.print("Error: "+ e.getMessage());
