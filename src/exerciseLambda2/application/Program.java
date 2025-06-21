@@ -15,5 +15,21 @@ public class Program {
 
 
 
+            List<Product> list = new ArrayList<>();
+
+            String line = br.readLine();
+            while (line != null) {
+
+                String[] filds = line.split(",");
+                list.add(new Product(filds[0], Double.parseDouble(filds[1])));
+                line = br.readLine();
+            }
+
+
+        }
+        catch (IOException e) {
+            System.out.print("Error: "+ e.getMessage());
+        }
+        sc.close();
     }
 }
