@@ -22,26 +22,24 @@ public class Program {
 
         try(BufferedReader bf = new BufferedReader(new FileReader(path))){
             List<Employee> list = new ArrayList<>();
-            String file = bf.readLine();
+            String line = bf.readLine();
 
-            while(file != null){
-                String[] filds = file.split(",");
+            while(line != null){
+                String[] filds = line.split(",");
                 list.add(new Employee(filds[0], filds[1], Double.parseDouble(filds[2])));
-                file = bf.readLine();
+                line = bf.readLine();
             }
 
             System.out.println("Enter salary: ");
             double salary = sc.nextDouble();
             System.out.println("Email of people whose salary is more than " + String.format("%.2f", salary) + ":");
 
+            List<String> email =list.stream().filter(p -> p.getSalary() > salary).map(p -> p.getEmail()).sorted()
+                    .collect(Collectors.toList());
+            email.forEach(System.out::println);
+
             double avg = list.stream().filter(p -> p.getName().toUpperCase().charAt(0) == 'M')
                     .mapToDouble(p -> p.getSalary()).sum();
-
-
-            list.stream().filter(p -> p.getSalary() > salary).map(p -> p.getEmail())
-                    .collect(Collectors.toList());
-
-            list.forEach(System.out::println);
 
             System.out.print("Sum of salary of people whose name starts with 'M': " + String.format("%.2f", avg));
 
