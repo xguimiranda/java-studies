@@ -34,7 +34,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: " + "name:'" + name + " email:'" + email + " salary:"
-                + String.format("%.2f", salary);
+        return getEmail();
     }
 }

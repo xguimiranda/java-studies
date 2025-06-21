@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Program {
     public static void main(String[] args) {
@@ -51,6 +52,12 @@ public class Program {
 
 
         sc.close();
+//        Input file:
+//        Maria,maria@gmail.com,3200.00
+//        Alex,alex@gmail.com,1900.00
+//        Marco,marco@gmail.com,1700.00
+//        Bob,bob@gmail.com,3500.00
+//        Anna,anna@gmail.com,2800.00
     }
 
 }
