@@ -31,6 +31,10 @@ public class Program {
                 line = br.readLine();
             }
 
+            double avg = list.stream().map(p -> p.getPrice())
+                    .reduce(0.0, (x,y) -> x + y) / list.size();
+
+            System.out.println("Average price: "+ String.format("%.2f", avg));
 
         }
         catch (IOException e) {
