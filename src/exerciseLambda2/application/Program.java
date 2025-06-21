@@ -14,6 +14,7 @@ public class Program {
         Locale.setDefault(Locale.US);
 
 
+        try(BufferedReader br = new BufferedReader(new FileReader(path))){
 
             List<Product> list = new ArrayList<>();
 
