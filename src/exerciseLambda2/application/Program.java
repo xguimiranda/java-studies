@@ -47,6 +47,13 @@ public class Program {
         catch (IOException e) {
             System.out.print("Error: "+ e.getMessage());
         }
+//        Input File:
+//        Tv,900.00
+//        Mouse,50.00
+//        Tablet,350.50
+//        HD Case,80.90
+//        Computer,850.00
+//        Monitor,290.00
         sc.close();
     }
 }
