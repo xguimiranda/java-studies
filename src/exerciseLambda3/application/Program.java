@@ -40,7 +40,10 @@ public class Program {
             list.stream().filter(p -> p.getSalary() > salary).map(p -> p.getEmail())
                     .collect(Collectors.toList());
 
-        
+            list.forEach(System.out::println);
+
+            System.out.print("Sum of salary of people whose name starts with 'M': " + String.format("%.2f", avg));
+
         }
         catch (IOException e) {
             System.out.println("Error: "+ e.getMessage());
