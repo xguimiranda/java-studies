@@ -29,6 +29,16 @@ public class Program {
                 file = bf.readLine();
             }
 
+            System.out.println("Enter salary: ");
+            double salary = sc.nextDouble();
+            System.out.println("Email of people whose salary is more than " + String.format("%.2f", salary) + ":");
+
+            double avg = list.stream().filter(p -> p.getName().toUpperCase().charAt(0) == 'M')
+                    .mapToDouble(p -> p.getSalary()).sum();
+
+
+            list.stream().filter(p -> p.getSalary() > salary).map(p -> p.getEmail())
+                    .collect(Collectors.toList());
 
         
         }
