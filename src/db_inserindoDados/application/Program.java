@@ -4,6 +4,7 @@ import db_inserindoDados.DB;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,7 +22,8 @@ public class Program {
                     "INSERT INTO seller " +
                     "(Name, Email, Birthdate, BaseSalary, DepartmentID) " +
                     "VALUES " +
-                    "(?, ?, ?, ?, ?)");
+                    "(?, ?, ?, ?, ?)",
+                    PreparedStatement.RETURN_GENERATED_KEYS);
 
             st.setString(1, "Carl Purple");
             st.setString(2, "carl@gamil.com");
@@ -31,7 +33,17 @@ public class Program {
 
             int rowsAffected = st.executeUpdate();
 
-            System.out.println("Done! Rows affected: " + rowsAffected);
+            if (rowsAffected > 0) {
+                ResultSet rs = st.getGeneratedKeys();
+                while (rs.next()) {
+                    int id = rs.getInt(1);
+                    System.out.println("Done! Id: " + id);
+                }
+            }
+            else {
+                System.out.println("No rows affected!");
+            }
+
         }
         catch(SQLException e){
             e.printStackTrace();
