@@ -1,6 +1,6 @@
-package SQLexerciseTest.application;
+package db_recuperandoDados.application;
 
-import db.DB;
+import db_recuperandoDados.DB;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

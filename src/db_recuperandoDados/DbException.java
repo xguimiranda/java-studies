@@ -1,4 +1,4 @@
-package db;
+package db_recuperandoDados;
 
 public class DbException extends RuntimeException{
 
