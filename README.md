@@ -28,7 +28,7 @@ Repository with my study notes, exercises, and projects developed while learning
 
 2. Run `/database/script.sql` to create the database.
 
-3. Create a `db.properties` file inside `/src`:
+3. Create a `db_recuperandoDados.properties` file inside `/src`:
 
 ```properties
 user=your_user
