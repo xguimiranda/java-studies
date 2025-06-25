@@ -17,7 +17,7 @@ public class Program {
 
             st = conn.prepareStatement(
                     "UPDATE seller " +
-                            "SET BaseSalary = BaseSalary + ? " +
+                            "SET BaseSalary = BaseSalary - ? " +
                             "WHERE DepartmentId = ?");
 
             st.setDouble(1, 200.0);
