@@ -4,12 +4,12 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercicio1 {
+    static final  int N = 30;
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
-        final  int N = 30;
 
-        // teste
+
         int n = 0;
         int[] rm = new int[N];
         double[] nota1 = new double[N];
