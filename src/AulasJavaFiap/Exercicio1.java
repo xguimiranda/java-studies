@@ -15,7 +15,6 @@ public class Exercicio1 {
         double[] nota1 = new double[N];
         double[] nota2 = new double[N];
 
-        String[] status = new String[N];
 
         System.out.print("Digite seu RM: ");
         int rmLido = sc.nextInt();
@@ -33,13 +32,19 @@ public class Exercicio1 {
         double[] media = new double[N];
         for (int i = 0; i < n; i++){
             media[i] = (nota1[i] + nota2[i]) / 2;
-
-            if (media[i] >= 6)
-                status[i] = "Aprovado";
-            else
-                status[i] = "Reprovado";
-
-            System.out.printf("RM: %d | Média %.1f | Status %s\n", rm[i], media[i], status[i]);
+            System.out.printf("RM: %d | Média %.1f ", rm[i], media[i]);
+        }
+        int[] rmAprovados = new int[n];
+        int nAp = 0;
+        for (int i = 0; i < n; i++){
+            if (media[i]>=6){
+                rmAprovados[nAp] = rm[i];
+                nAp++;
+            }
+        }
+        System.out.println("\n ***** Alunos Aprovados *******");
+        for (int i = 0; i < nAp; i++){
+            System.out.println(rmAprovados[i]);
         }
     }
 }
