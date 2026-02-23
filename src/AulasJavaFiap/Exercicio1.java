@@ -1,0 +1,44 @@
+package AulasJavaFiap;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Exercicio1 {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+        final  int N = 30;
+
+        int n = 0;
+        int[] rm = new int[N];
+        double[] nota1 = new double[N];
+        double[] nota2 = new double[N];
+
+        String[] status = new String[N];
+
+        System.out.print("Digite seu RM: ");
+        int rmLido = sc.nextInt();
+        while (rmLido >= 0 && n < N){
+           rm[n] = rmLido;
+            System.out.print("Digite a nota 1: ");
+            nota1[n] = sc.nextDouble();
+            System.out.print("Digite a nota 2: ");
+            nota2[n] = sc.nextDouble();
+
+            n++;
+            System.out.print("Digite seu RM: ");
+            rmLido = sc.nextInt();
+        }
+        double[] media = new double[N];
+        for (int i = 0; i < n; i++){
+            media[i] = (nota1[i] + nota2[i]) / 2;
+
+            if (media[i] >= 6)
+                status[i] = "Aprovado";
+            else
+                status[i] = "Reprovado";
+
+            System.out.printf("RM: %d | Média %.1f | Status %s\n", rm[i], media[i], status[i]);
+        }
+    }
+}
